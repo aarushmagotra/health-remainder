@@ -11,13 +11,10 @@ print('"MASSAGE YOUR EYES" & to do some "PHYSICAL ACTIVITY" in regular intervals
 print()
 print('between 9 am to 5 pm')
 
-
 def time_():
     return datetime.datetime.now()
 
-
 check_w = 1
-
 
 def write_w():
     global check_w
@@ -29,13 +26,12 @@ def write_w():
         filee = open('water.txt', 'a+')
         filee.write(date)
         filee.write(':')
-
         filee.close()
+        
     if check_w >= 1:
         filee = open('water.txt', 'a+')
         filee.write('\n')
         filee.write('\t')
-
         filee.write('[')
         filee.write(str(time_()))
         filee.write(']')
@@ -44,24 +40,20 @@ def write_w():
         filee.write('\n')
         filee.close()
 
-
 def write_e():
     global check_w
     date_w = datetime.datetime.now()
     date = str(date_w.date())
     check_w += 1
     if check_w == 2:
-
         filee = open('eye.txt', 'a+')
         filee.write(date)
         filee.write(':')
-
         filee.close()
     if check_w >= 2:
         filee = open('eye.txt', 'a+')
         filee.write('\n')
         filee.write('\t')
-
         filee.write('[')
         filee.write(str(time_()))
         filee.write(']')
@@ -70,24 +62,20 @@ def write_e():
         filee.write('\n')
         filee.close()
 
-
 def write_ex():
     global check_w
     date_w = datetime.datetime.now()
     date = str(date_w.date())
     check_w += 1
     if check_w == 2:
-
         filee = open('exer.txt', 'a+')
         filee.write(date)
         filee.write(':')
-
         filee.close()
     if check_w >= 2:
         filee = open('exer.txt', 'a+')
         filee.write('\n')
         filee.write('\t')
-
         filee.write('[')
         filee.write(str(time_()))
         filee.write(']')
@@ -96,59 +84,42 @@ def write_ex():
         filee.write('\n')
         filee.close()
 
-
 def audio_water():
     global check_w
     while True:
-
         pygame.mixer.init()
         pygame.mixer.music.load("sounds\\audio.mp3")
         pygame.mixer.music.set_volume(0.5)
         pygame.mixer.music.play(-1)
-
         pause = input('Type "done" when you finish doing it: ')
         if pause == 'done':
             pygame.mixer.music.pause()
             break
-
     write_w()
 
-
 def audio_eye():
-    # date_w = datetime.datetime.now()
-    # date = str(date_w.date())
-
     while True:
-
         pygame.mixer.init()
         pygame.mixer.music.load("sounds\\audio.mp3")
         pygame.mixer.music.set_volume(0.5)
         pygame.mixer.music.play(-1)
-
         pause = input('Type "done" when you finish doing it: ')
         if pause == 'done':
             pygame.mixer.music.pause()
             break
     write_e()
 
-
 def audio_exe():
-    # date_w = datetime.datetime.now()
-    # date = str(date_w.date())
-
     while True:
-
         pygame.mixer.init()
         pygame.mixer.music.load("sounds\\audio.mp3")
         pygame.mixer.music.set_volume(0.5)
         pygame.mixer.music.play(-1)
-
         pause = input('Type "done" when you finish doing it: ')
         if pause == 'done':
             pygame.mixer.music.pause()
             break
     write_ex()
-
 
 def __time():
     now = datetime.datetime.now()
@@ -194,7 +165,6 @@ while True:
             print('Drink a 200 ml glass of water')
             print()
             audio_water()
-
     if __time() == '11:5':
         if cw == 1:
             cw += 1
