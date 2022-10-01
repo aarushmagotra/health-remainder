@@ -40,6 +40,7 @@ def write_w():
         filee.write('\n')
         filee.close()
 
+        
 def write_e():
     global check_w
     date_w = datetime.datetime.now()
