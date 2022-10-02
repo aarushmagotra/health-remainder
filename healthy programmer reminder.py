@@ -13,7 +13,6 @@ print('between 9 am to 5 pm')
 
 def time_():
     return datetime.datetime.now()
-
 check_w = 1
 
 def write_w():
@@ -22,7 +21,6 @@ def write_w():
     date = str(date_w.date())
 
     if check_w == 1:
-
         filee = open('water.txt', 'a+')
         filee.write(date)
         filee.write(':')
