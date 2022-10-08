@@ -2,8 +2,9 @@ import pygame
 import time
 import datetime
 print()
-print()
+print("=======================================")
 print('WELCOME TO THE HEALTH REMINDER SYSTEM')
+print("=======================================")
 print()
 print('In this system we will constantly remind you to "DRINK WATER",')
 print()
